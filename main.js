@@ -1,3 +1,15 @@
+// Scroll to top on page load
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
+// Prevent hash scrolling on initial load
+if (window.location.hash) {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 1);
+}
+
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
