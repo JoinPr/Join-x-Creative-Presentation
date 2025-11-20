@@ -23,42 +23,7 @@ if (form) {
   });
 }
 
-const themeToggle = document.querySelector(".theme-toggle");
-if (themeToggle) {
-  const applyTheme = (theme) => {
-    if (theme === "light") {
-      document.body.dataset.theme = "light";
-    } else {
-      delete document.body.dataset.theme;
-    }
-    try {
-      if (theme === "light") {
-        localStorage.setItem("jx-theme", "light");
-      } else {
-        localStorage.removeItem("jx-theme");
-      }
-    } catch (_) {
-      /* depolama yok say */
-    }
-  };
-
-  const savedTheme = (() => {
-    try {
-      return localStorage.getItem("jx-theme");
-    } catch (_) {
-      return null;
-    }
-  })();
-
-  if (savedTheme === "light") {
-    applyTheme("light");
-  }
-
-  themeToggle.addEventListener("click", () => {
-    const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
-    applyTheme(nextTheme);
-  });
-}
+// Theme toggle removed - dark mode only
 
 const animatedItems = document.querySelectorAll("[data-animate]");
 if (animatedItems.length) {

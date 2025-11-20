@@ -171,21 +171,7 @@ section {
   background: var(--pill);
 }
 
-.theme-toggle {
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: transform 0.2s, border 0.2s;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent);
-}
+/* Theme toggle removed - dark mode only */
 
 .hero {
   padding-top: 150px;
@@ -813,13 +799,6 @@ footer {
     font-size: 1.1rem;
     padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .theme-toggle {
-    position: absolute;
-    right: 70px;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   section {
